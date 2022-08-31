@@ -1,0 +1,171 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body, .wrapper, .content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body{
+  padding: 0 10px;
+  min-height: 100vh;
+  background: #98D6EA;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style utnuk item list  */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  
+  /* buat daftar item yang tidak dapat dipilih */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Setel semua daftar item ganjil ke warna berbeda (garis-zebra) */
+ul li:nth-child(odd) {
+  background: #FBF8F1;
+}
+
+/* Warna background yang lebih gelap saat mengarahkan kursor */
+ul li:hover {
+  background: #C8F2EF;
+}
+
+/* Saat diklik, tambahkan warna background dan coret teks */
+ul li.checked {
+  background: #DE8971;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Tambahkan tanda "centang" saat diklik */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style utnuk button close */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+input {
+  margin: 0;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+  background-color: #BAE5E5;
+  color: #424874;
+}
+
+/* Style untuk button "Tambah"  */
+.addBtn {
+  padding: 10px;
+  width: 100%;
+  background: #98D6EA;
+  color: black;
+  font-weight: 500;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.addBtn:hover {
+  background-color: #4797B1;
+}
+.wrapper{
+  width: 440px;
+  height: auto;
+  padding: 30px 30px 38px;
+  background: #fff;
+  border-radius: 10px;
+  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.wrapper h1{
+  font-size: 42px;
+  font-weight: 500;
+  margin: 15px;
+}
+.wrapper .content{
+  width: 100%;
+  justify-content: space-between;
+}
+
+.time {
+  font-weight: bold;
+  color: #354259;
+  transition-duration: 0.5s;
+  margin-top: 15px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+.date-time {
+  color: #354259;
+  font-size: 18px;
+  margin-bottom: 25px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.time:hover {
+  color: #1572A1;
+  transition-timing-function: ease-out;
+  transition-duration: 0.5s; 
+}
+
+.date-time:hover {
+  color: #1572A1;
+  transition-timing-function: ease-out;
+  transition-duration: 0.5s; 
+}
+
+.made{
+  text-align: center;
+  font-family: 'Poppins', sans-serif; 
+}
+@media screen and (max-width: 500px) {
+  .time {
+    font-size: 50px;
+  }
+}
